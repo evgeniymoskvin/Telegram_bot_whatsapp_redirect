@@ -20,7 +20,7 @@ def start(message):
 def get_user_text(message):
     text = message.text
     if text[0] != '+':
-        bot.send_message(message.chat.id, "Не корректно указан номер")
+        bot.send_message(message.chat.id, "Некорректно указан номер")
     else:
         number, flag = check_number(text)
         if not flag:
