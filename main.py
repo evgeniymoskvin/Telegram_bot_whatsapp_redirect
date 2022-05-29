@@ -12,7 +12,7 @@ bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    mess = f'Привет, {message.from_user.first_name} {message.from_user.last_name} <br> Что бы получить ссылку для отправки сообщения в WhatsApp без добавления в список контактов, просто пришлите номер:'
+    mess = f'Привет, {message.from_user.first_name} {message.from_user.last_name} Что бы получить ссылку для отправки сообщения в WhatsApp без добавления в список контактов, просто пришлите номер:'
     bot.send_message(message.chat.id, mess, parse_mode='html')
 
 
